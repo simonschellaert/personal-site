@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
+title: Simon Schellaert
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -23,6 +23,40 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
+
+contact_options:
+  - name: Twitter
+    icon: fab fa-twitter
+    link: https://twitter.com/simonschellaert
+  - name: GitHub
+    icon: fab fa-github
+    link: https://github.com/simonschellaert
+  - name: LinkedIn
+    icon: fab fa-linkedin
+    link: https://www.linkedin.com/in/simonschellaert/
+  - name: Email
+    icon: fas fa-envelope-square
+    link: mailto:me@simonschellaert.com
+
+projects:
+  - id: radiobelgium
+    name: Radio Belgium
+    description: |
+      I designed, developed and brought to market [Radio Belgium](https://radiobelgium.be), a native app to turn any iOS or Android device instantly into an amazing radio player.  
+
+      Since launch, the app has been downloaded over 500 000 times with more than <strong>150 000 monthly active users</strong> and frequently tops the App Store charts. The app was also featured on popular press sites, such as De Standaard and Humo.  
+
+      Besides being an interesting project to sharpen my technical skills, it also allowed me to gain <strong>hands-on experience</strong> in a variety of non-technical fields such as product management, business development and marketing
+    action_title: Visit website
+    action_link: https://radiobelgium.be
+  - id: tapaway
+    name: Tapaway
+    action_title: Watch demo on YouTube
+    action_link: https://www.youtube.com/watch?v=nZdtnwRD3Bk
+  - id: raytracer
+    name: Ray Tracer in Rust
+
+     
 
 # Build settings
 markdown: kramdown

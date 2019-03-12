@@ -1,21 +1,96 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="/css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-  <div class="container">
+<div class="main-container">
     <div class="row">
-      <div class="col">
-        <h1 class="text-primary">Hello there!</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium corporis ipsam cumque rerum quas quia neque, dolor vitae laboriosam.</p>
-        <i class="fas fa-thumbs-up fa-2x"></i>
-      </div>
+        <div class="introduction-details">
+            <span class="greeting">Hello, I'm</span>
+            <h1>Simon Schellaert</h1>
+            <span class="subtitle">Computer Scientist</span>
+
+            <ul class="contact-options">
+                {% for contact_option in site.contact_options %}
+                <li><a href="{{ contact_option.link }}" target="_blank"><i class="{{ contact_option.icon }}" title="{{ contact_option.name }}"></i></a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="introduction-photo">
+            <img src="img/headshot.jpg"/>
+        </div>
     </div>
-  </div>
+
+    <h2>Featured Projects</h2>
+
+    <div class="projects">
+        {% for project in site.projects %}
+        <div class="project">
+            <img src="img/projects/{{ project.id }}/thumbnail.png" data-toggle="modal" data-target="#project-{{ project.id }}-modal">
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% for project in site.projects %}
+
+<div class="project-modal" id="project-{{ project.id }}-modal">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div>
+                                <h2 style="text-align: left; margin: 0; margin-bottom: 1rem;">{{ project.name }}</h2>
+                                {{ project.description | markdownify }}
+                                <p style="text-align: justify; font-size: 0.95rem;">
+                                </p>
+                                {% if project.action_link %}
+                                    <a href="{{ project.action_link }}" target="_blank" class="btn-sm btn-primary">{{ project.action_title }}</a>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="d-none d-md-flex col-md-4 justify-content-center align-items-center"
+                             style="text-align: center;">
+                            <img style="max-width: 100%; margin: 20px 0" src="img/projects/{{ project.id }}/side.png"/>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
+
+
 </html>
