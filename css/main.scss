@@ -65,7 +65,7 @@ $headings-font-weight: 600;
         width: 50%;
         max-width: 300px;
         margin: 60px 0;
-        box-shadow: 0 0 0 16px hsl(0, 0%, 85%), 0 0 0 32px hsl(0, 0%, 95%);
+        box-shadow: 0 0 0 16px #d0e8f9, 0 0 0 32px #eaf4fb;
 
         @include media-breakpoint-up(md) {
             margin: 0 0 80px 0;
@@ -120,8 +120,9 @@ h2 {
 .project:hover img {
     box-shadow: 0px 15px 70px -12px rgba(0,0,0,0.41);
 }
-.modal.fade .modal-dialog 
-{
+
+// Disable the sliding in of dialogs
+.modal.fade .modal-dialog {
     -moz-transition: none !important;
     -o-transition: none !important;
     -webkit-transition: none !important;

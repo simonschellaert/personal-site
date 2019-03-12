@@ -13,16 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Simon Schellaert
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
 
 contact_options:
   - name: Twitter
@@ -44,26 +36,38 @@ projects:
     description: |
       I designed, developed and brought to market [Radio Belgium](https://radiobelgium.be), a native app to turn any iOS or Android device instantly into an amazing radio player.  
 
-      Since launch, the app has been downloaded over 500 000 times with more than <strong>150 000 monthly active users</strong> and frequently tops the App Store charts. The app was also featured on popular press sites, such as De Standaard and Humo.  
+      Since launch, the app has been downloaded over 500 000 times with more than __150 000 monthly active users__ and frequently tops the App Store charts. The app was also featured on popular press sites, such as De Standaard and Humo.
 
-      Besides being an interesting project to sharpen my technical skills, it also allowed me to gain <strong>hands-on experience</strong> in a variety of non-technical fields such as product management, business development and marketing
+      Besides being an interesting project to sharpen my technical skills, it also allowed me to gain __hands-on experience__ in a variety of non-technical fields such as product management, business development and marketing
     action_title: Visit website
     action_link: https://radiobelgium.be
   - id: tapaway
     name: Tapaway
+    description: |
+      Inspired by the succes of Angry Birds and Cut The Rope, I developed and released my own __physics-based puzzle game__ during high school.
+
+      Tapaway was my first foray into iOS development and made use of the [Cocos2d](https://cocos2d-x.org) game engine, which I integrated with the [Box2D](https://box2d.org/) physic engine.
+      This combination allowed me too learn the ropes of __programming and memory management in Objective-C(++)__.
+
+      The end result was an enjoyable game with over 30 handcrafted levels and received great reviews from numerous players.
+      Since this was mainly a learning project, I stopped supporting it when iOS transitioned to 64-bit.
+      A small demo of the game is still available on YouTube.
     action_title: Watch demo on YouTube
     action_link: https://www.youtube.com/watch?v=nZdtnwRD3Bk
   - id: raytracer
-    name: Ray Tracer in Rust
+    name: Path Tracer in Rust
+    description: |
+      After completing [Advent of Code](https://adventofcode.com/) in [Rust](https://www.rust-lang.org/) and really liking the programming experience and safety guarantees of the language, I set out to complete a larger project to further __improve my Rust-skills__.
+
+      Writing a path tracer is a great way to become more acquainted with a language, since it touches upon so __many different common aspects of a language__.
+      Besides, it is very cool to watch your own program making a scene come alive.
+
+      I'm still working on some key features and plan on publishing the __full source code on GitHub__ in the near future.
 
      
 
 # Build settings
 markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
-
 sass:
   sass_dir: css
 
