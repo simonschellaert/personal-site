@@ -29,7 +29,7 @@
         </div>
 
         <div class="introduction-photo">
-            <img src="img/headshot.jpg"/>
+            <img src="img/headshot.jpg" alt="Simon Schellaert"/>
         </div>
     </div>
 
@@ -38,7 +38,7 @@
     <div class="projects">
         {% for project in site.projects %}
         <div class="project">
-            <img src="img/projects/{{ project.id }}/thumbnail.png" data-toggle="modal" data-target="#project-{{ project.id }}-modal">
+            <img src="img/projects/{{ project.id }}/thumbnail.png" alt="{{ project.name }}" data-toggle="modal" data-target="#project-{{ project.id }}-modal">
         </div>
         {% endfor %}
     </div>
@@ -67,7 +67,7 @@
 
                         <div class="d-none d-md-flex col-md-4 justify-content-center align-items-center"
                              style="text-align: center;">
-                            <img style="max-width: 100%; margin: 20px 0" src="img/projects/{{ project.id }}/side.png"/>
+                            <img style="max-width: 100%; margin: 20px 0" src="img/projects/{{ project.id }}/side.png" alt="{{ project.name }}" />
                         </div>
                     </div>
 
