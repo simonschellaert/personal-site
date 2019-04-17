@@ -12,6 +12,7 @@
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/beerslider/dist/BeerSlider.css">
 </head>
 
 <body>
@@ -68,7 +69,16 @@
 
                         <div class="d-none d-md-flex col-md-4 justify-content-center align-items-center"
                              style="text-align: center;">
+                            {% if project.id == 'thesis' %}
+                            <div style="max-width: 100%; margin: 20px 0"  id="slider" class="beer-slider" data-beer-label="after">
+                                <img src="img/projects/thesis/after.jpg" alt="">
+                                <div class="beer-reveal" data-beer-label="before">
+                                    <img src="img/projects/thesis/before.jpg" alt="">
+                                </div>
+                            </div>
+                            {% else %}
                             <img style="max-width: 100%; margin: 20px 0" src="img/projects/{{ project.id }}/side.png" alt="{{ project.name }}" />
+                            {% endif %}
                         </div>
                     </div>
 
@@ -82,6 +92,8 @@
 {% endfor %}
 
 
+
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -91,6 +103,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+<script src="https://unpkg.com/beerslider/dist/BeerSlider.js"></script>
+<script>
+    new BeerSlider(document.getElementById('slider'));
+</script>
 </body>
 
 

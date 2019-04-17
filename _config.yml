@@ -56,6 +56,18 @@ projects:
       A small demo of the game is still available on YouTube.
     action_title: Watch demo on YouTube
     action_link: https://www.youtube.com/watch?v=nZdtnwRD3Bk
+  - id: thesis
+    name: Master's thesis on Deep Learning
+    description: |
+      After completing courses on __artificial intelligence and machine learning__, I was excited about the huge potential of these technologies.
+      I was especially intrigued by deep learning and thus decided to do my master's thesis in this domain.
+
+      Specifically, the title of my master's thesis is __automatic comic colorization and restoration through deep learning__.
+      Briefly worded, the goal is to fully automatically colorize degraded black-and-white pages from old comics.
+      To do so, I'm building upon the powerful [pix2pix](https://phillipi.github.io/pix2pix/) architecture that proposes __conditional adversarial networks__ as a general-purpose solution to image-to-image translation problems.
+
+      Completing this thesis, allowed me to immerse myself into recent deep learning research.
+      I also gained a lot of hands-on experience with applying __state-of-the-art deep learning techniques__ to solve challenging problems.
   - id: raytracer
     name: Path Tracer in Rust
     description: |
@@ -65,8 +77,6 @@ projects:
       Besides, it is very cool to watch your own program making a scene come alive.
 
       I'm still working on some key features and plan on publishing the __full source code on GitHub__ in the near future.
-
-     
 
 # Build settings
 markdown: kramdown
