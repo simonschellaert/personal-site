@@ -9,10 +9,13 @@
     <title>{{ site.title }}</title>
     <meta name="description" content="{{ site.description }}"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+          crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://unpkg.com/beerslider/dist/BeerSlider.css">
+    <link rel="stylesheet" href="https://unpkg.com/beerslider@1.0.3/dist/BeerSlider.css"
+          integrity="sha384-ZveTPUF1SurDs6nJkjOW+d0sLlPO23ctWsQWj4w1qdzVXTurxziP922rCiqd4jrf"
+          crossorigin="anonymous">
 </head>
 
 <body>
@@ -91,9 +94,6 @@
 </div>
 {% endfor %}
 
-
-
-
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -103,13 +103,16 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-<script src="https://unpkg.com/beerslider/dist/BeerSlider.js"></script>
+<script src="https://unpkg.com/beerslider@1.0.3/dist/BeerSlider.js"
+        integrity="sha384-IqsSf+qPrMYFru/xpdalu+CdlKy4UGVzOAvWDC6dYQOKBLtTfrxaIXxyehlCqerc"
+        crossorigin="anonymous"></script>
 <script>
     var slider = new BeerSlider(document.getElementById('slider'));
     $("#project-thesis-modal").on('shown.bs.modal', function (e) {
         slider.setImgWidth();
     });
 </script>
+
 </body>
 
 
