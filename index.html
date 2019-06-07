@@ -105,7 +105,10 @@
         crossorigin="anonymous"></script>
 <script src="https://unpkg.com/beerslider/dist/BeerSlider.js"></script>
 <script>
-    new BeerSlider(document.getElementById('slider'));
+    var slider = new BeerSlider(document.getElementById('slider'));
+    $("#project-thesis-modal").on('shown.bs.modal', function (e) {
+        slider.setImgWidth();
+    });
 </script>
 </body>
 
