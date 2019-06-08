@@ -1,0 +1,410 @@
+---
+---
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import "../radionetherlands/styles/bootstrap";
+
+$light-primary-color: #fff;
+$dark-primary-color: #343434;
+
+
+
+
+/* Mixins */
+
+@mixin box-shadow($args...) {
+    -webkit-box-shadow: $args;
+    -moz-box-shadow: $args;
+    box-shadow: $args;
+}
+
+
+@mixin vertical-center {
+    display: flex;
+    align-items: center;
+    
+    /* Safari Compatibility */
+    display: -webkit-flex;
+    -webkit-align-items: center;
+}
+
+@mixin row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+
+body {
+    background-color: #fdfcfc;
+    color: $dark-primary-color;
+    font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-weight: 300;
+    font-stretch: normal;
+    letter-spacing: 1px;
+}
+
+
+/* Navigation Bars */
+
+
+.navbar-overlay {
+    @extend .navbar;
+    @extend .navbar-default;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 0px;
+    
+    // Collapse on smaller screens to a standard Bootstrap hamburger menu
+    @media (max-width: $screen-xs-max) {
+        background-color: #fdfcfc;
+        position: static;
+    }
+
+    @media (min-width: $screen-sm-min) {
+        height: 100px;
+    }
+}
+
+
+.navbar-overlay .navbar-header {
+    h1, h2 {
+        font-weight: inherit;
+        font-size: inherit;
+        
+        margin: 0;
+        color: $dark-primary-color;
+    }
+    
+    h2 {
+        @extend .hidden-xs;
+        font-size: 1.2em;
+    }
+}
+
+
+@media (min-width: $screen-sm-min) {
+    
+    .navbar-overlay.light {
+        color: $light-primary-color;
+
+        .navbar-header h1, h2 {
+            color: $light-primary-color;
+        }
+
+        .navbar-nav > li > a {
+            color: $light-primary-color;
+        }
+    }
+    
+}
+
+
+@media (min-width: $screen-sm-min) {
+    
+    .navbar-overlay {
+        font-size: 1.2em;
+        color: $dark-primary-color;
+    }
+    
+    .navbar-overlay .navbar-nav li a {
+        color: $dark-primary-color;
+    }
+    
+    .navbar-overlay .navbar-header h1 {
+        font-size: 1.6em;
+        margin: 4px 0;
+    }
+    
+    .navbar-overlay .navbar-right {
+        margin-top: 5px;
+    }
+    
+    // Hide the background of when expanding a menu item
+    .navbar-overlay .navbar-nav > .open > a {
+        &, &:hover, &:focus {
+            color: $dark-primary-color;
+            background-color: transparent;
+        }
+    }
+}
+
+
+
+
+
+/* Home */
+
+.home-banner {
+    @include vertical-center;
+    
+    color: white;
+    
+    text-align: center;
+    min-height: 500px;
+    
+    background-image: url("/images/coverphoto.jpg");
+    background-position: center;
+    background-size: cover;
+    
+    height: 100%;
+    
+    @media (max-width: $screen-xs-max) {
+        height: calc(100% - 50px);
+    }
+}
+
+html, body {
+    height:100%;
+}
+
+
+.home-banner h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 3em;
+    text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.4); 
+}
+
+.home-banner .apps .app {
+    @extend .col-xs-4;
+    
+    margin-top: 200px;
+    
+    img {
+        max-width: 130px;
+        width: 75%;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+        font-weight: inherit;
+        text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4); 
+    }
+}
+
+
+/* App Banner */
+
+.app-banner {
+    @extend .jumbotron;
+    @include vertical-center;
+    
+    @include box-shadow(inset 0px -2px 7px -2px rgba(0,0,0,0.75));
+    
+    background-color: #88aaed;
+    background-image: url("/radionetherlands/images/background-banner.png");
+    background-position: center;
+    background-size: cover;
+    
+    position: relative;
+    height: 580px;
+    overflow: hidden;
+}
+
+
+.app-banner .app-description {
+    position: relative;
+    z-index: 4;
+    max-width: 600px;
+
+    @media (max-width: $screen-sm-max) {
+        text-align: center;
+        max-width: 100%;
+    }
+}
+
+
+.app-banner .app-description h1 img {
+    margin-right: 30px;
+    vertical-align: middle;
+    
+    @media (max-width: $screen-xs-max) {
+        margin: 30px;
+    }
+}
+
+
+.app-banner .app-description h1 {
+    font-size: 3.5em;
+}
+
+
+.app-banner .app-description p {
+    font-size: 1.75em;
+    margin: 50px 0;
+}
+
+
+.app-banner .app-screenshot {
+    @extend .hidden-xs;
+    @extend .hidden-sm;
+    
+    position: absolute;
+    right: -20px;
+    bottom: 0px;
+    z-index: 0;
+    height: 500px;
+}
+
+.features-overview hr {
+    display: block;
+    margin: 1em 0;
+    padding: 0;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #758394;
+    
+    @extend .hidden-xs;
+}
+
+
+/* Features */
+
+.features-overview {
+    @extend .container;
+}
+
+.features-overview .feature {
+    @extend .col-sm-4;
+    
+    margin-bottom: 20px;
+}
+
+.features-overview .feature .feature-details {
+    @extend .row;
+    
+    text-align: center;
+    
+    @media (max-width: $screen-xs-max) {
+        @include row-eq-height;
+    }
+}
+
+.features-overview .feature .feature-details .feature-description {
+    @extend .col-sm-12;
+    @extend .col-sm-push-0;
+    
+    @extend .col-xs-7;
+    @extend .col-xs-push-5;
+    
+    @media (min-width: $screen-sm-min) {
+        min-height: 240px;
+    }
+    
+    @media (min-width: $screen-md-min) {
+        min-height: 200px;
+    }
+}
+
+.features-overview .feature .feature-details .feature-description p {
+    margin-bottom: 20px;
+    
+    font-size: 1.1em;
+}
+
+
+.features-overview .feature .feature-details .feature-image {
+    @extend .col-sm-12;
+    @extend .col-sm-pull-0;
+    
+    @extend .col-xs-5;
+    @extend .col-xs-pull-7;
+    
+    @media (max-width: $screen-xs-max) {
+        @include vertical-center;
+    }
+}
+
+
+.features-overview .feature .feature-details .feature-image img {
+    width: 100%;
+    max-width: 230px;
+    height: auto; /* Fix bug when rotating iPhone from portrait to landscape */
+    border: 1px solid #757575;
+}
+
+
+
+footer {
+    @include vertical-center;
+    
+    margin-top: 30px;
+    height: 100px;
+    
+    background-color: #758394;
+    color: white;
+    @include box-shadow(inset 0px 2px 7px -2px rgba(0,0,0,0.75));
+}
+
+footer p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+footer a {
+    color: white;
+    margin: 0 15px;
+}
+
+
+
+
+
+
+/* Support */
+
+
+
+#support-banner {
+    @extend .container;
+    
+    text-align: center;
+    margin: 100px 0 50px 0;
+}
+
+
+#support-banner h2:first-of-type {
+    font-size: 3em;
+}
+
+
+#support-banner h2 {
+    margin: 10px 0;
+}
+
+
+#support-categories {
+    @extend .row;
+}
+
+
+#support-categories .support-category {
+    @extend .col-sm-6;
+}
+
+
+#support-categories .support-category ul {
+    list-style-type: none;
+    background-color: red;
+}
+
+
+#support-contact {
+    text-align: center;
+    margin-top: 70px;
+}
+
+
+#support-contact .fa-life-ring {
+    font-size: 3em;
+}
