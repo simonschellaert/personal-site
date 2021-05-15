@@ -100,7 +100,7 @@ h2 {
 }
 
 .projects {
-    @extend .row, .justify-content-md-center;
+    @extend .row;
 
     .project {
         @extend .col-6, .col-md-3;
