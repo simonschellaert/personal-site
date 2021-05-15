@@ -53,24 +53,31 @@
 {% for project in site.projects %}
 
 <div class="project-modal" id="project-{{ project.id }}-modal">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-dialog modal-xl modal-dialog-centered my-5">
         <div class="modal-content">
             <div class="modal-body">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-8 d-flex align-items-center">
+                        <div class="col-md-8 d-flex align-items-center {% if project.has_video %}col-md-12{% endif %}">
                             <div>
                                 <h2 style="text-align: left; margin: 0; margin-bottom: 1rem;">{{ project.name }}</h2>
                                 {{ project.description | markdownify }}
-                                <p style="text-align: justify; font-size: 0.95rem;">
-                                </p>
+
                                 {% if project.action_link %}
                                     <a href="{{ project.action_link }}" target="_blank" class="btn-sm btn-primary">{{ project.action_title }}</a>
+                                {% endif %}
+
+                                {% if project.has_video %}
+                                <video class="d-block mx-auto" style="max-width: 480px; width: 100%;" autoplay muted controls playsinline loop>
+                                    <source src="img/projects/{{ project.id }}/video.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
                                 {% endif %}
                             </div>
                         </div>
 
-                        <div class="d-none d-md-flex col-md-4 justify-content-center align-items-center"
+                        {% unless project.has_video %}
+                        <div class="d-md-flex col-md-4 justify-content-center align-items-center"
                              style="text-align: center;">
                             {% if project.id == 'thesis' %}
                             <div style="max-width: 100%; margin: 20px 0"  id="slider" class="beer-slider" data-beer-label="after">
@@ -83,6 +90,7 @@
                             <img style="max-width: 100%; margin: 20px 0" src="img/projects/{{ project.id }}/side.jpg" alt="{{ project.name }}" />
                             {% endif %}
                         </div>
+                        {% endunless %}
                     </div>
 
                 </div>
