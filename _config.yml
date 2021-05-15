@@ -68,6 +68,21 @@ projects:
 
       Completing this thesis, allowed me to immerse myself into recent deep learning research.
       I also gained a lot of hands-on experience with applying __state-of-the-art deep learning techniques__ to solve challenging problems.
+  - id: 8-bit
+    name: 8-bit computer
+    has_video: true
+    description: |
+      Due to the various lockdowns the in 2020, I had a bit more time on my hands than usual.
+
+      One thing that kept me busy was __building a programmable 8-bit computer from logic gates__, based on Ben Eater's [video series](https://eater.net/8bit).
+      That series is one of the best explanations of computing and digital electronics I've ever seen.
+      Besides, there is something magical about stripping a bunch of wires and turning those into a machine that ‘thinks’.
+
+      In the video, you can see my build generating the __Fibonacci sequence__ (on the 7-segment display in the lower right) at a modest 1 KHz.
+      It's the result of many evenings spent behind an oscilloscope, debugging various software and hardware issues.
+      But it has been incredibly fun and educational, and it made me appreciate the tech we have now even more..
+      I'm currently working on a GPU component to hook it up to a [small OLED display](https://www.adafruit.com/product/326).
+
   - id: raytracer
     name: Path Tracer in Rust
     description: |
