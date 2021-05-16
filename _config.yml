@@ -49,39 +49,42 @@ projects:
       Inspired by the succes of Angry Birds and Cut The Rope, I developed and released my own __physics-based puzzle game__ during high school.
 
       Tapaway was my first foray into iOS development and made use of the [Cocos2d](https://cocos2d-x.org) game engine, which I integrated with the [Box2D](https://box2d.org/) physic engine.
-      This combination allowed me too learn the ropes of __programming and memory management in Objective-C(++)__.
+      This combination allowed me too learn the ropes of __programming and memory management in Objective-C++__.
 
       The end result was an enjoyable game with over 30 handcrafted levels and received great reviews from numerous players.
       Since this was mainly a learning project, I stopped supporting it when iOS transitioned to 64-bit.
-      A small demo of the game is still available on YouTube.
+      A video of the gameplay is still available on YouTube.
     action_title: Watch demo on YouTube
     action_link: https://www.youtube.com/watch?v=nZdtnwRD3Bk
   - id: thesis
     name: Master's thesis on Deep Learning
+    action_title: Read the paper
+    action_link: img/projects/thesis/paper.pdf
     description: |
-      After completing courses on __artificial intelligence and machine learning__, I was excited about the huge potential of these technologies.
-      I was especially intrigued by deep learning and thus decided to do my master's thesis in this domain.
+      After completing courses on __machine learning__, I was excited by its huge potential and decided do my master's thesis in this domain.
 
-      Specifically, the title of my master's thesis is __automatic comic colorization and restoration through deep learning__.
-      Briefly worded, the goal is to fully automatically colorize degraded black-and-white pages from old comics.
-      To do so, I'm building upon the powerful [pix2pix](https://phillipi.github.io/pix2pix/) architecture that proposes __conditional adversarial networks__ as a general-purpose solution to image-to-image translation problems.
+      Specifically, my master's thesis is titled __automatic comic colorization and restoration through deep learning__.
+      It is about automatically colorizing degraded black-and-white pages from old comics.
+      To do so, I built upon recent advances in deep learning and generative adversarial networks.
+      Specifically, I proposed a modified network architecture and loss function that leads to more natural results.
 
-      Completing this thesis, allowed me to immerse myself into recent deep learning research.
+      Completing this thesis allowed me to immerse myself into recent deep learning research.
       I also gained a lot of hands-on experience with applying __state-of-the-art deep learning techniques__ to solve challenging problems.
+      You can find my full thesis [here](https://libstore.ugent.be/fulltxt/RUG01/002/787/402/RUG01-002787402_2019_0001_AC.pdf) or read the paper below.
   - id: 8-bit
     name: 8-bit computer
     has_video: true
     description: |
-      Due to the various lockdowns the in 2020, I had a bit more time on my hands than usual.
+      Due to the various lockdowns in 2020, I had a bit more time on my hands than usual.
 
       One thing that kept me busy was __building a programmable 8-bit computer from logic gates__, based on Ben Eater's [video series](https://eater.net/8bit).
       That series is one of the best explanations of computing and digital electronics I've ever seen.
-      Besides, there is something magical about stripping a bunch of wires and turning those into a machine that ‘thinks’.
+      Besides, there is something magical about stripping a bunch of wires and turning those into a machine that seems to think.
 
       In the video, you can see my build generating the __Fibonacci sequence__ (on the 7-segment display in the lower right) at a modest 1 KHz.
       It's the result of many evenings spent behind an oscilloscope, debugging various software and hardware issues.
       But it has been incredibly fun and educational, and it made me appreciate the tech we have now even more..
-      I'm currently working on a GPU component to hook it up to a [small OLED display](https://www.adafruit.com/product/326).
+      I'm currently working on a GPU component to drive a [small OLED display](https://www.adafruit.com/product/326).
 
   - id: raytracer
     name: Path Tracer in Rust
