@@ -86,16 +86,6 @@ projects:
       But it has been incredibly fun and educational, and it made me appreciate the tech we have now even more.
       I'm currently working on a GPU component to drive a [small OLED display](https://www.adafruit.com/product/326).
 
-  - id: raytracer
-    name: Path Tracer in Rust
-    description: |
-      After completing [Advent of Code](https://adventofcode.com/) in [Rust](https://www.rust-lang.org/) and really liking the programming experience and safety guarantees of the language, I set out to complete a larger project to further __improve my Rust skills__.
-
-      Writing a path tracer is a great way to become more acquainted with a language, since it touches upon so __many different common aspects of a language__.
-      Besides, it is very cool to watch your own program making a scene come alive.
-
-      I'm still working on some key features and plan on publishing the __full source code on GitHub__ in the near future.
-
 # Build settings
 markdown: kramdown
 sass:
