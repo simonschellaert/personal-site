@@ -46,10 +46,10 @@ projects:
   - id: tapaway
     name: Tapaway
     description: |
-      Inspired by the succes of Angry Birds and Cut The Rope, I developed and released my own __physics-based puzzle game__ during high school.
+      Inspired by the success of Angry Birds and Cut The Rope, I developed and released my own __physics-based puzzle game__ during high school.
 
-      Tapaway was my first foray into iOS development and made use of the [Cocos2d](https://cocos2d-x.org) game engine, which I integrated with the [Box2D](https://box2d.org/) physic engine.
-      This combination allowed me too learn the ropes of __programming and memory management in Objective-C++__.
+      Tapaway was my first foray into iOS development and made use of the [Cocos2d](https://cocos2d-x.org) game engine, which I integrated with the [Box2D](https://box2d.org/) physics engine.
+      This combination allowed me to learn the ropes of __programming and memory management in Objective-C++__.
 
       The end result was an enjoyable game with over 30 handcrafted levels and received great reviews from numerous players.
       Since this was mainly a learning project, I stopped supporting it when iOS transitioned to 64-bit.
@@ -61,7 +61,7 @@ projects:
     action_title: Read the paper
     action_link: img/projects/thesis/paper.pdf
     description: |
-      After completing courses on __machine learning__, I was excited by its huge potential and decided do my master's thesis in this domain.
+      After completing courses on __machine learning__, I was excited by its huge potential and decided to do my master's thesis in this domain.
 
       Specifically, my master's thesis is titled __automatic comic colorization and restoration through deep learning__.
       It is about automatically colorizing degraded black-and-white pages from old comics.
@@ -83,7 +83,7 @@ projects:
 
       In the video, you can see my build generating the __Fibonacci sequence__ (on the 7-segment display in the lower right) at a modest 1 KHz.
       It's the result of many evenings spent behind an oscilloscope, debugging various software and hardware issues.
-      But it has been incredibly fun and educational, and it made me appreciate the tech we have now even more..
+      But it has been incredibly fun and educational, and it made me appreciate the tech we have now even more.
       I'm currently working on a GPU component to drive a [small OLED display](https://www.adafruit.com/product/326).
 
   - id: raytracer
