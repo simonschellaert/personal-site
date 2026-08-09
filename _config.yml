@@ -57,7 +57,7 @@ projects:
     action_title: Watch demo on YouTube
     action_link: https://www.youtube.com/watch?v=nZdtnwRD3Bk
   - id: thesis
-    name: Master's thesis on Deep Learning
+    name: Master's Thesis on Deep Learning
     action_title: Read the paper
     action_link: img/projects/thesis/paper.pdf
     description: |
@@ -72,7 +72,7 @@ projects:
       I also gained a lot of hands-on experience with applying __state-of-the-art deep learning techniques__ to solve challenging problems.
       You can find my full thesis [here](https://libstore.ugent.be/fulltxt/RUG01/002/787/402/RUG01-002787402_2019_0001_AC.pdf) or read the paper below.
   - id: 8-bit
-    name: 8-bit computer
+    name: 8-Bit Computer
     has_video: true
     description: |
       Due to the various lockdowns in 2020, I had a bit more time on my hands than usual.
