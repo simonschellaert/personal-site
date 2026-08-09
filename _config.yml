@@ -19,9 +19,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 contact_options:
-  - name: Twitter
-    icon: fab fa-twitter
-    link: https://twitter.com/simonschellaert
+  - name: X
+    icon: fab fa-x-twitter
+    link: https://x.com/simonschellaert
   - name: GitHub
     icon: fab fa-github
     link: https://github.com/simonschellaert
