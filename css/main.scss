@@ -12,13 +12,12 @@ $project-border-radius: 20px;
 $h2-font-size: 1.8rem;
 $headings-font-weight: 600;
 
-
-
 @import 'bootstrap/bootstrap';
 
 
 .main-container {
     @extend .container;
+    max-width: map-get($container-max-widths, "xl");
 
     @include media-breakpoint-up(md) {
         margin-top: 150px;
