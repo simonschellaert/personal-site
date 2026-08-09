@@ -40,7 +40,7 @@ projects:
 
       Since launch, the app has been downloaded over 500 000 times with more than __150 000 monthly active users__ and frequently tops the App Store charts. The app was also featured on popular press sites, such as De Standaard and Humo.
 
-      Besides being an interesting project to sharpen my technical skills, it also allowed me to gain __hands-on experience__ in a variety of non-technical fields such as product management, business development and marketing
+      Besides being an interesting project to sharpen my technical skills, it also allowed me to gain __hands-on experience__ in a variety of non-technical fields such as product management, business development and marketing.
     action_title: Visit website
     action_link: https://radiobelgium.be
   - id: tapaway
@@ -89,7 +89,7 @@ projects:
   - id: raytracer
     name: Path Tracer in Rust
     description: |
-      After completing [Advent of Code](https://adventofcode.com/) in [Rust](https://www.rust-lang.org/) and really liking the programming experience and safety guarantees of the language, I set out to complete a larger project to further __improve my Rust-skills__.
+      After completing [Advent of Code](https://adventofcode.com/) in [Rust](https://www.rust-lang.org/) and really liking the programming experience and safety guarantees of the language, I set out to complete a larger project to further __improve my Rust skills__.
 
       Writing a path tracer is a great way to become more acquainted with a language, since it touches upon so __many different common aspects of a language__.
       Besides, it is very cool to watch your own program making a scene come alive.
