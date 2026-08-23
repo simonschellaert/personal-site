@@ -27,15 +27,15 @@ simonschellaert.com {
 	# Compress responses using gzip.
 	encode gzip
 
-	# Redirect anything related to Radio Belgium to its site.
-	redir /radiobelgium/* https://radiobelgium.be permanent
-	redir /radiobelgium.php https://radiobelgium.be permanent
-
 	# Redirect anything related to support to the support section of the Radio Belgium site.
 	redir /radiobelgium/support/* https://radiobelgium.be/support permanent
 	redir /radionetherlands/support/* https://radiobelgium.be/support permanent
 	redir /support.php https://radiobelgium.be/support permanent
 	redir /support https://radiobelgium.be/support permanent
+
+	# Redirect anything related to Radio Belgium to its site.
+	redir /radiobelgium/* https://radiobelgium.be permanent
+	redir /radiobelgium.php https://radiobelgium.be permanent
 
 	redir /radionetherlands.php /radionetherlands permanent
 
