@@ -1,0 +1,54 @@
+# The Caddyfile is an easy way to configure your Caddy web server.
+#
+# Unless the file starts with a global options block, the first
+# uncommented line is always the address of your site.
+#
+# To use your own domain name (with automatic HTTPS), first make
+# sure your domain's A/AAAA DNS records are properly pointed to
+# this machine's public IP, then replace ":80" below with your
+# domain name.
+{
+	# Provide an email address in case of problems with the certificate.
+	email me@simonschellaert.com
+}
+
+www.simonschellaert.com {
+	# Redirect all requests for www. to the naked domain. 
+	redir https://simonschellaert.com{uri} permanent
+}
+
+simonschellaert.com {
+	# Set this path to your site's directory.
+	root * /var/www/html
+
+	# Enable the static file server.
+	file_server
+
+	# Compress responses using gzip.
+	encode gzip
+
+	# Redirect anything related to Radio Belgium to its site.
+	redir /radiobelgium/* https://radiobelgium.be permanent
+	redir /radiobelgium.php https://radiobelgium.be permanent
+
+	# Redirect anything related to support to the support section of the Radio Belgium site.
+	redir /radiobelgium/support/* https://radiobelgium.be/support permanent
+	redir /radionetherlands/support/* https://radiobelgium.be/support permanent
+	redir /support.php https://radiobelgium.be/support permanent
+	redir /support https://radiobelgium.be/support permanent
+
+	redir /radionetherlands.php /radionetherlands permanent
+
+	# Block access to anything under _obsolete/ as these files should no longer we served.
+	# We just keep them around as a historical artifact, but they should be deleted at some point.
+	respond /_obsolete/* 404
+
+	# Enable logging. Note that logs are rotated by default.
+	log {
+		format console
+		output file /var/log/caddy/access.log
+	}
+}
+
+# Refer to the Caddy docs for more information:
+# https://caddyserver.com/docs/caddyfile
